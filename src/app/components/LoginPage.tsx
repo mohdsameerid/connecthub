@@ -95,7 +95,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ onNavigate }) => {
                 <motion.div variants={itemVariants}>
                     <div className="shadow-xl border-0 bg-white/95 backdrop-blur-sm rounded-lg">
                         <div className="p-6 px-6">
-                            <h2 className="text-2xl font-bold text-gray-900 text-center">Sign In</h2>
+                            <h2 className="text-2xl font-bold text-gray-900 text-center cursor-pointer">Sign In</h2>
                         </div>
 
                         <div className="px-6 pb-6">
