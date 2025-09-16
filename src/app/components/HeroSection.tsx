@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Users, Zap, TrendingUp } from 'lucide-react';
+import Link from 'next/link';
 
 const HeroSection: React.FC = () => {
     const containerVariants = {
@@ -120,27 +121,31 @@ const HeroSection: React.FC = () => {
                                 variants={itemVariants}
                                 className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8"
                             >
-                                <motion.button
-                                    variants={buttonVariants}
-                                    whileHover="hover"
-                                    whileTap={{ scale: 0.95 }}
-                                    className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center"
-                                >
-                                    <Users className="w-5 h-5 mr-2" />
-                                    Join as Influencer
-                                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
-                                </motion.button>
+                                <Link href="/login">
+                                    <motion.button
+                                        variants={buttonVariants}
+                                        whileHover="hover"
+                                        whileTap={{ scale: 0.95 }}
+                                        className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center cursor-pointer"
+                                    >
+                                        <Users className="w-5 h-5 mr-2" />
+                                        Join as Influencer
+                                        <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                                    </motion.button>
+                                </Link>
 
-                                <motion.button
-                                    variants={buttonVariants}
-                                    whileHover="hover"
-                                    whileTap={{ scale: 0.95 }}
-                                    className="group px-8 py-4 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-semibold rounded-xl border-2 border-white/20 hover:border-white/40 transition-all duration-300 flex items-center justify-center"
-                                >
-                                    <TrendingUp className="w-5 h-5 mr-2" />
-                                    Join as Brand
-                                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
-                                </motion.button>
+                                <Link href="/login">
+                                    <motion.button
+                                        variants={buttonVariants}
+                                        whileHover="hover"
+                                        whileTap={{ scale: 0.95 }}
+                                        className="group px-8 py-4 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-semibold rounded-xl border-2 border-white/20 hover:border-white/40 transition-all duration-300 flex items-center justify-center cursor-pointer"
+                                    >
+                                        <TrendingUp className="w-5 h-5 mr-2" />
+                                        Join as Brand
+                                        <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                                    </motion.button>
+                                </Link>
                             </motion.div>
 
                             {/* Stats */}
