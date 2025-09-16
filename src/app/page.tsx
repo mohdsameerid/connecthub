@@ -1,23 +1,9 @@
-import { AboutSection } from "./components/AboutSection";
-import ContactSection from "./components/ContactSection";
-import Footer from "./components/Footer";
-import HeroSection from "./components/HeroSection";
-import PricingSection from "./components/PricingSection";
-import ServicesSection from "./components/ServicesSection";
-import StatsSection from "./components/StatsSection";
-import TestimonialsSection from "./components/TestimonialsSection";
+// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import ConnectHubLoginPage from "./components/ConnectHubLoginPage";
+import HomePage from "./HomePage";
 
 export default function Home() {
   return (
-    <>
-      <HeroSection />
-      <AboutSection />
-      <ServicesSection />
-      <StatsSection />
-      <TestimonialsSection />
-      <PricingSection />
-      <ContactSection />
-      <Footer />
-    </>
+    <HomePage />
   );
 }
