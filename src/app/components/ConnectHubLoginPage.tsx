@@ -13,6 +13,7 @@ import {
     Chrome,
     Facebook,
 } from 'lucide-react';
+import Link from 'next/link';
 
 const ConnectHubLoginPage: React.FC = () => {
     // const navigate = useNavigate();
@@ -230,12 +231,14 @@ const ConnectHubLoginPage: React.FC = () => {
                 {/* Footer Link */}
                 <motion.p variants={itemVariants} className="text-center text-white/80">
                     Don&apos;t have an account?{' '}
-                    <button
-                        // onClick={() => navigate('/sign-up')}
-                        className="text-cyan-400 hover:underline"
-                    >
-                        Sign up now
-                    </button>
+                    <Link href="/signup">
+                        <button
+                            // onClick={() => navigate('/sign-up')}
+                            className="text-cyan-400 hover:underline"
+                        >
+                            Sign up now
+                        </button>
+                    </Link>
                 </motion.p>
             </motion.div>
         </section>
