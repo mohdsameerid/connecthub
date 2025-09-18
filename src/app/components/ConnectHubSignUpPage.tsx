@@ -15,7 +15,7 @@ const ConnectHubSignUpPage: React.FC = () => {
 
     // Step 2 states
     const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
+    // const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const containerVariants = {
@@ -45,7 +45,7 @@ const ConnectHubSignUpPage: React.FC = () => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        if (!name || !email || !password) return alert("Please fill all fields");
+        if (!name || !password) return alert("Please fill all fields");
 
         setIsLoading(true);
         await new Promise((res) => setTimeout(res, 1500));
@@ -169,7 +169,7 @@ const ConnectHubSignUpPage: React.FC = () => {
                             </div>
 
                             {/* Email */}
-                            <div className="space-y-2">
+                            {/* <div className="space-y-2">
                                 <label htmlFor="email" className="text-white font-medium">
                                     Email Address
                                 </label>
@@ -184,7 +184,7 @@ const ConnectHubSignUpPage: React.FC = () => {
                                         className="w-full pl-10 h-12 rounded-md bg-white/10 text-white placeholder-white/60 border border-white/30 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                                     />
                                 </div>
-                            </div>
+                            </div> */}
 
                             {/* Password */}
                             <div className="space-y-2">
