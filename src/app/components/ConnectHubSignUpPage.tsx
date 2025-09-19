@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Mail, Lock, Eye, EyeOff, User, Phone, Check } from 'lucide-react';
+import Link from 'next/link';
 
 const ConnectHubSignUpPage: React.FC = () => {
     const [step, setStep] = useState(1);
@@ -234,7 +235,9 @@ const ConnectHubSignUpPage: React.FC = () => {
                 {/* Footer Link */}
                 <motion.p variants={itemVariants} className="text-center text-white/80">
                     Already have an account?{' '}
-                    <button className="text-cyan-400 hover:underline">Sign in</button>
+                    <Link href="/login">
+                        <button className="text-cyan-400 hover:underline">Sign in</button>
+                    </Link>
                 </motion.p>
             </motion.div>
         </section>
